@@ -338,11 +338,12 @@ iframe {
 
 
 /*main eventos*/
+
 .eventos {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 40px;
+    gap: 20px;
 }
 
 .texto-evento {
@@ -412,9 +413,9 @@ iframe {
 
 /*main contacto*/
 
+
 .banner-contacto {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
+    width: 100%;
     height: 350px;
     overflow: hidden;
 }
