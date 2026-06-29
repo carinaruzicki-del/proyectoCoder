@@ -603,3 +603,178 @@ footer {
         text-align: left;
     }
 }
+
+/*ultimo resposive*/
+
+@media (max-width: 768px) {
+
+    .presentacion {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem;
+    }
+
+    .presentacion h2 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .presentacion p {
+        width: 100%;
+        padding: 0;
+        text-align: justify;
+    }
+
+    .foto-principal {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+    }
+
+}
+
+@media (max-width: 360px) {
+
+    .titulo {
+        margin-top: 0;
+    }
+
+    .mayuscula {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .presentacion {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .presentacion h2 {
+        font-size: 1.3rem;
+    }
+
+    .presentacion p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .foto-principal {
+        width: 100%;
+        max-width: 100%;
+    }
+
+}
+footer{
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+}
+
+.redes{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pfooter_minuscula{
+    font-size: .75rem;
+}
+
+.contenedor-grid{
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 1rem;
+}
+.p-intro,
+.hdos,
+.video-uno,
+.p-videouno,
+.video-dos,
+.p-videodos,
+.video-tres,
+.p-videotres,
+.video-cinco,
+.p-videocinco,
+.video-seis,
+.p-videoseis,
+.recorte-uno,
+.recorte-dos{
+    grid-column: 1;
+    grid-row: auto;
+}
+.contenedor-grid{
+    margin: .8rem;
+}
+
+.p-intro{
+    font-size: .95rem;
+}
+
+.hdos{
+    text-align: center;
+}
+
+iframe{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+.img-periodico{
+    width: 100%;
+    height: auto;
+}
+.img-intro{
+    max-height: 180px;
+}
+
+.eventos {
+    flex-direction: column;
+    align-items: center;
+}
+
+.eventos img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.texto-evento {
+    width: 100%;
+}
+.eventos {
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.eventos img {
+    width: 100%;
+}
+
+.texto-evento h2 {
+    font-size: 1.2rem;
+}
+
+.texto-evento p {
+    font-size: .95rem;
+}
+
+.btn-outline-naranja {
+    width: 100%;
+}
+
+.contacto{
+    padding: 0 1rem;
+}
+
+.page-title{
+    text-align:center;
+}
+
+.banner-contacto{
+    height:220px;
+}
+
+.contacto-info{
+    margin-top:1rem;
+}
