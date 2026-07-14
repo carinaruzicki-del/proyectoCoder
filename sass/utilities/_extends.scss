@@ -1,0 +1,10 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+.card-base {
+    background-color: v.$color-fondo-claro;
+    padding: v.$espacio-md;
+    border-radius: v.$radio-card;
+
+    @include m.flex(column, nowrap, flex-start, stretch, 0);
+}

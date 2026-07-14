@@ -1,0 +1,115 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+@use "../utilities/extends" as e;
+
+
+.banner-libro {
+
+    width: 100%;
+    height: v.$banner-libros;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    background-color: v.$color-fondo-gris;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 15%;
+        display: block;
+
+    }
+}
+
+.libros {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: v.$espacio-xl;
+
+    padding: v.$espacio-xl;
+
+}
+
+.libro {
+    @extend .card-base;
+}
+
+.libro-amor {
+
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+
+    margin: 0 auto;
+    display: block;
+
+    object-fit: cover;
+}
+
+
+.plibro {
+
+    padding-inline: 2rem;
+    padding-bottom: v.$espacio-md;
+}
+
+
+.boton-comprar {
+
+    background-color: v.$color-fondo-violeta;
+    color: v.$color-texto-secundario;
+
+    text-decoration: none;
+
+    padding: 0.8rem 1.5rem;
+
+    border-radius: v.$radio-boton;
+
+    @include m.flex(row, nowrap, center, center, 0.5rem);
+
+    width: fit-content;
+
+    margin: v.$espacio-md auto 0;
+
+    font-weight: bold;
+
+    transition: v.$transicion;
+
+
+    i {
+        margin-right: 8px;
+    }
+
+
+    &:hover {
+
+        i {
+            transform: scale(1.8);
+        }
+    }
+}
+
+
+
+@media (max-width: v.$tablet) {
+
+    .libros {
+
+        grid-template-columns: 1fr;
+
+        padding: v.$espacio-sm;
+
+        gap: v.$espacio-md;
+    }
+
+
+    .banner-libro {
+
+        height: 200px;
+    }
+}

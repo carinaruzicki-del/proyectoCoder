@@ -1,0 +1,41 @@
+@use "variables" as v;
+
+body,
+main,
+footer {
+    font-family: v.$fuente-principal;
+}
+
+h1 {
+    font-family: v.$fuente-principal;
+    color: v.$color-texto-principal;
+    background-color: v.$color-secundario;
+    width: 100%;
+    padding: v.$espacio-xs;
+    margin-top: v.$titulo-home;
+}
+
+h2,
+h3 {
+    color: v.$color-texto-secundario;
+}
+
+p {
+    color: v.$color-parrafo;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2,
+h3,
+h4,
+p,
+a {
+    font-family: v.$fuente-principal;
+}
+
+img {
+    max-width: 100%;
+}

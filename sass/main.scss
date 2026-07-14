@@ -1,0 +1,16 @@
+// npx sass --watch sass/main.scss styles/style.css npm run sass//
+
+@use "utilities/reset";
+@use "utilities/variables";
+@use "utilities/mixins";
+@use "utilities/base";
+@use "./utilities/extends";
+
+@use "components/header";
+@use "components/footer";
+
+@use "pages/home";
+@use "pages/libros";
+@use "pages/medios";
+@use "pages/eventos";
+@use "pages/contacto";  

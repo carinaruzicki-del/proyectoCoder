@@ -1,0 +1,91 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+.titulo {
+    background-color: v.$color-secundario;
+    width: 100%;
+    margin-top: v.$titulo-home;
+    padding: v.$espacio-xs;
+}
+
+.mayuscula {
+    color: v.$color-texto-principal;
+    margin: 0;
+    font-size: v.$font-h1-home;
+    text-transform: uppercase;
+}
+
+.presentacion {
+    @include m.flex(row, nowrap, flex-start, flex-start, v.$espacio-lg);
+
+    p {
+        flex: 1;
+        font-size: v.$font-p-home;
+        line-height: 2;
+        margin-top: v.$espacio-sm;
+        padding: 0 1rem 0 0;
+        text-align: left;
+    }
+}
+
+.foto-principal {
+    flex: 1;
+    max-height: v.$foto-principal-max;
+    object-fit: cover;
+}
+
+@media (max-width: v.$tablet) {
+
+    .presentacion {
+        @include m.flex(column, nowrap, flex-start, center, v.$espacio-md);
+        padding: v.$espacio-md;
+
+        h2 {
+            width: 100%;
+            text-align: center;
+            margin-bottom: v.$espacio-sm;
+        }
+
+        p {
+            width: 100%;
+            padding: 0;
+            text-align: justify;
+        }
+    }
+
+    .foto-principal {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+    }
+}
+
+@media (max-width: v.$mobile) {
+
+    .titulo {
+        margin-top: 0;
+    }
+
+    .mayuscula {
+        font-size: v.$font-h1-home-mobile;
+        text-align: center;
+    }
+
+    .presentacion {
+        padding: v.$espacio-sm;
+        gap: v.$espacio-sm;
+
+        h2 {
+            font-size: v.$font-h2-mobile;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+    }
+
+    .foto-principal {
+        max-width: 100%;
+    }
+}
