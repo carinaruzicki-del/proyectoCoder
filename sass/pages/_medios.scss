@@ -1,0 +1,173 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+
+.hero {
+    width: 100%;
+}
+
+.img-intro {
+    width: 100%;
+    max-height: 300px;
+    display: block;
+    object-fit: cover;
+    object-position: center 40%;
+}
+
+.contenedor-grid {
+    display: grid;
+    grid-template-columns: 40% 10% 40%;
+    grid-auto-rows: auto;
+    gap: v.$espacio-sm;
+    margin: v.$espacio-lg;
+}
+
+.p-intro {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    text-align: center;
+    padding: v.$espacio-sm;
+}
+
+.hdos {
+    grid-column: 2 / 3;
+    text-decoration: underline dotted;
+}
+
+.uno {
+    grid-row: 2 / 3;
+}
+
+.dos {
+    grid-row: 7 / 8;
+}
+
+.tres {
+    grid-row: 12 / 13;
+}
+
+iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+
+.video-uno {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    position: relative;
+}
+
+.p-videouno {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+}
+
+.video-dos {
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+}
+
+.p-videodos {
+    grid-column: 3 / 4;
+    grid-row: 5 / 6;
+}
+
+.video-tres {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+}
+
+.p-videotres {
+    grid-column: 1 / 2;
+    grid-row: 6 / 7;
+}
+
+.video-cinco {
+    grid-column: 3 / 4;
+    grid-row: 8 / 9;
+}
+
+.p-videocinco {
+    grid-column: 3 / 4;
+    grid-row: 9 / 10;
+}
+
+.video-seis {
+    grid-column: 1 / 2;
+    grid-row: 10 / 11;
+}
+
+.p-videoseis {
+    grid-column: 1 / 2;
+    grid-row: 11 / 12;
+}
+
+.recorte-uno {
+    grid-column: 3 / 4;
+    grid-row: 13 / 14;
+}
+
+.recorte-dos {
+    grid-column: 1 / 2;
+    grid-row: 14 / 15;
+    margin-bottom: v.$espacio-lg;
+}
+
+.img-periodico {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+@media (max-width: v.$tablet) {
+
+    .contenedor-grid {
+        grid-template-columns: 1fr;
+        gap: v.$espacio-md;
+        margin: 0.8rem;
+    }
+
+    .p-intro,
+    .hdos,
+    .video-uno,
+    .p-videouno,
+    .video-dos,
+    .p-videodos,
+    .video-tres,
+    .p-videotres,
+    .video-cinco,
+    .p-videocinco,
+    .video-seis,
+    .p-videoseis,
+    .recorte-uno,
+    .recorte-dos {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .hdos {
+        text-align: center;
+    }
+
+    .p-intro {
+        font-size: .95rem;
+    }
+
+    .img-intro {
+        max-height: 180px;
+    }
+
+    .img-periodico {
+        width: 100%;
+        height: auto;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+}

@@ -1,0 +1,103 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+.h1eventos {
+    margin-top: 90px;
+}
+
+.eventos {
+    @include m.flex(row, nowrap, space-between, flex-start, 20px);
+
+    img {
+        width: 45%;
+        height: auto;
+    }
+}
+
+.texto-evento {
+    width: 50%;
+}
+
+.img-fluid {
+    width: 45%;
+    height: auto;
+}
+
+.btn-outline-naranja {
+    color: v.$color-secundario;
+    border-color: v.$color-secundario;
+
+    &:hover {
+        color: v.$color-blanco;
+        background-color: v.$color-secundario;
+        border-color: v.$color-secundario;
+    }
+
+    &:focus,
+    &:active {
+        color: v.$color-blanco;
+        background-color: v.$color-secundario;
+        border-color: v.$color-secundario;
+        box-shadow: none;
+    }
+}
+
+.eventouno {
+    background-color: v.$color-gris-evento-1;
+    text-align: center;
+}
+
+.eventodos {
+    background-color: v.$color-gris-evento-2;
+    text-align: center;
+}
+
+.eventotres {
+    background-color: v.$color-celeste-evento;
+    text-align: center;
+}
+
+.eventocuatro {
+    background-color: v.$color-fondo-gris;
+    text-align: center;
+}
+
+.eventocinco {
+    background-color: v.$color-violeta-evento;
+    text-align: center;
+}
+
+.eventoseis {
+    background-color: v.$color-gris-evento;
+    text-align: center;
+}
+
+@media (max-width: v.$tablet) {
+
+    .eventos {
+        @include m.flex(column, nowrap, flex-start, center, 1rem);
+        padding: 1rem;
+
+        img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+    }
+
+    .texto-evento {
+        width: 100%;
+
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: .95rem;
+        }
+    }
+
+    .btn-outline-naranja {
+        width: 100%;
+    }
+}

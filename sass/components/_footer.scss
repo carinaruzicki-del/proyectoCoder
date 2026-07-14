@@ -1,0 +1,44 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+footer {
+    background-color: v.$color-principal;
+    @include m.flex(row, nowrap, space-between, center, 0);
+    padding: 0.5rem 1rem;
+}
+
+.redes {
+    @include m.flex(row, nowrap, flex-start, center, 0.5rem);
+}
+
+.imgfooter {
+    width: 4rem;
+    height: auto;
+}
+
+.pfooter {
+    color: v.$color-crema;
+}
+
+.pfooter_minuscula {
+    font-size: 0.8rem;
+    color: v.$color-crema;
+}
+
+@media (max-width: v.$tablet) {
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .redes {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pfooter_minuscula {
+        font-size: 0.75rem;
+    }
+}
