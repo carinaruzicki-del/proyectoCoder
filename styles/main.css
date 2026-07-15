@@ -44,6 +44,18 @@ img {
   max-width: 100%;
 }
 
+.card-base, .libro {
+  background-color: #f1eeee;
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 0;
+}
+
 header {
   background-color: rgb(92, 62, 148);
   display: flex;
@@ -255,18 +267,6 @@ footer {
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
   padding: 3rem;
-}
-
-.libro {
-  background-color: #f1eeee;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  gap: 0;
-  padding: 1.5rem;
-  border-radius: 10px;
 }
 
 .libro-amor {
@@ -692,15 +692,17 @@ iframe {
     font-size: 1.4rem;
     text-align: left;
   }
-  .contacto {
-    padding: 0 1rem;
-  }
-  .banner-contacto {
-    height: 220px;
-  }
-  .contacto-info {
-    margin-top: 1rem;
-  }
+}
+.contacto {
+  padding: 0 1rem;
+}
+
+.banner-contacto {
+  height: 220px;
+}
+
+.contacto-info {
+  margin-top: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */
